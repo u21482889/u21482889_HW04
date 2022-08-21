@@ -1,0 +1,41 @@
+﻿@model u21482889_HW04.Models.Low
+
+@{
+    ViewBag.Title = "Low";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Low</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Low-Maintenance trees</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p>Low maintenance trees may be expenseive up front but they save money over time due to their low maintenance. They can also help preserve soil health because they use up less water and nutrients which means more for the growth of the plants around them. Below is a link to some suggestions on low maintenance trees for you to plant</p>
+            <a href="https://www.gardeningetc.com/advice/best-low-maintenance-trees">Best low maintenance trees</a>
+
+            <p>please enter the number of low maintenance trees you currently have for some more personal suggestions.</p>
+            <input type="text" name="maintenance" />
+            <input type="submit" />
+
+            <img src="https://www.gardeningetc.com/advice/best-low-maintenance-trees" />
+            <img src="https://www.mylandscapes.co.uk/blog/low-maintenance-planting/" />
+            <img src="https://www.youtube.com/watch?v=ibjHzJJHdA8" />
+            <img src="https://www.pinterest.com/pin/219832025536310571/" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

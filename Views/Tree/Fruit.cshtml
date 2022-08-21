@@ -1,0 +1,41 @@
+﻿@model u21482889_HW04.Models.Fruit
+
+@{
+    ViewBag.Title = "Fruit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fruit</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Fruit</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p>Fruit trees are very good for the ecosystem becasue the seeds from the fruit promote more tree growth and oveer time they will save food and money because you will spend less money and resources  on the herbiverous animals. Below you will find a link for suggestions on which fruit trees to plant and how to implement a planting strategy </p>
+            <a href="https://growgreatfruit.com/animals-and-fruit-trees/">Fruit tree and animal advice</a>
+            <a href="https://www.homesandgardens.com/advice/best-fruit-trees"> Best Fruit trees</a>
+
+            <p>please enter in the amount of fruit trees you have to get more personal suggestions</p>
+            <input type="text"name="Fruit" />
+            <input type="submit" />
+            <img src="https://www.homestratosphere.com/types-of-fruit-trees/" />
+            <img src="https://unsplash.com/s/photos/fruit-tree" />
+            <img src="https://www.capegardencentre.co.za/collections/fruit-trees" />
+            <img src="https://www.latimes.com/lifestyle/story/2022-08-18/planting-fruit-orchard-in-los-angeles-yard" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

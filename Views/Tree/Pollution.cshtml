@@ -1,0 +1,64 @@
+﻿mujg@model u21482889_HW04.Models.Pollution
+
+@{
+    ViewBag.Title = "Pollution";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Pollution</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Pollution</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p>@ViewBag.Messsage</p>
+          <h2>Pollution cleansing trees</h2>
+
+            <p>There are certain types of trees that are best for dealing with pollution. These are some suggestions on what trees to plant to handle pollution</p>
+             <br />
+            <h3>Silver Maple</h3>
+            <img src="https://nfs.unl.edu/woody-plants/silver-maple" alt=" Silver Maple tree"/>
+            <a href="https://en.wikipedia.org/wiki/Acer_saccharinum">Learn about the Silver Maple tree</a>
+
+            <br />
+
+            <h3>Yellow Poplar</h3>
+            <img src="https://www.treehugger.com/identifying-the-yellow-poplar-tree-1343175" alt="Yellow poplar tree"/>
+            <a href="https://www.treehugger.com/identifying-the-yellow-poplar-tree-1343175">Learn more</a>
+
+            <br />
+
+            <h3>London Plane</h3>
+            <img src="https://www.gardenia.net/plant/platanus-acerifolia" alt="London Plane tree image" />
+            <a href="https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/london-plane/">Learn More</a>
+
+
+            <h3>Blue Spruce</h3>
+            <img src="https://www.plantingtree.com/products/baby-blue-spruce" alt="Blue Spruce tree image" />
+            <a href="https://en.wikipedia.org/wiki/Blue_spruce"> Learn more</a>
+
+            <h3>Pine tree</h3>
+            <img src="https://www.pinterest.com/pin/512636370083988976/" alt="Pine tree image" />
+            <a href="https://www.britannica.com/plant/pine">Learn more</a>
+
+            <p>Please enter in the amount of pollution/air purifying trees you have planted</p>
+            <input type="text" id="pollution" name="pollution" />
+            <input type="submit" />
+          
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

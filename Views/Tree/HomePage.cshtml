@@ -1,0 +1,244 @@
+﻿@model u21482889_HW04.Models.Tree
+
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HomePage</h2>
+
+
+@using (Html.BeginForm("HomePage", "Pollution",FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Tree</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+
+        <h1>Tree planting plan for the ecosystem</h1>
+        <p>
+            Greetings Pretoria Zoo, this web application is meant to help you plant more trees and improve life on land in and around the zoo which is goal 15 of the United Nations’ Sustainable Development Goals.
+            Three main land problems will be addressed: pollution, hunger and soil health. To address these problems we will need a balance of air purifying, fruit and low maintenance trees.
+            Please enter in the total amount of trees you have in the input box below.
+        </p>
+        Total amount of trees:
+        @Html.TextBoxFor(tree => tree.TreeCount)
+
+        <input type="submit" />
+        <div id="UCN 1">
+            <table>
+                <tr>System Name: Tree buying system</tr>
+                <tr>
+                    <td>Author: Nyanda Mdlalose</td>
+                    <td>Date:2022/08/15</td>
+                    <td>Version 1.0.0</td>
+                </tr>
+
+                <tr>
+                    <td>Use case name:</td>
+                    <td>Tree planting plan</td>
+
+                </tr>
+
+                <tr>
+                    <td>use case id:</td>
+                    <td>1</td>
+
+                </tr>
+                <tr>
+                    <td>Priority:</td>
+                    <td>High</td>
+
+                </tr>
+
+                <tr>
+                    <td>Source:</td>
+                    <td>Case Study</td>
+
+                </tr>
+
+                <tr>
+                    <td>Primary Business actor</td>
+                    <td>Pretoria zoo</td>
+                </tr>
+
+                <tr>
+                    <td>Other participating actors</td>
+                    <td>Sakata Seed Southern Africa</td>
+                </tr>
+
+                <tr>
+                    <td>Description</td>
+                    <td>This use case narrative describes the buying of tree seeds from Sakata Seed Southern Africa to plant in the Pretoria Zoo</td>
+                </tr>
+            </table>
+        </div>
+        <br />
+
+        <div id="UCN 2">
+            <table>
+                <tr>System Name: Pollution tree buying system</tr>
+                <tr>
+                    <td>Author: Nyanda Mdlalose</td>
+                    <td>Date:2022/08/15</td>
+                    <td>Version 1.0.0</td>
+                </tr>
+
+                <tr>
+                    <td>Use case name:</td>
+                    <td>T Pollution tree planting plan</td>
+
+                </tr>
+
+                <tr>
+                    <td>use case id:</td>
+                    <td>2</td>
+
+                </tr>
+                <tr>
+                    <td>Priority:</td>
+                    <td>High</td>
+
+                </tr>
+
+                <tr>
+                    <td>Source:</td>
+                    <td>Case Study</td>
+
+                </tr>
+
+                <tr>
+                    <td>Primary Business actor</td>
+                    <td>Pretoria zoo</td>
+                </tr>
+
+                <tr>
+                    <td>Other participating actors</td>
+                    <td>Sakata Seed Southern Africa</td>
+                </tr>
+
+                <tr>
+                    <td>Description</td>
+                    <td>This use case narrative describes the buying of pollution/air purifying tree seeds from Sakata Seed Southern Africa to plant in the Pretoria Zoo</td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div id="UCN 3">
+            <table>
+                <tr>System Name: Fruit tree buying system</tr>
+                <tr>
+                    <td>Author: Nyanda Mdlalose</td>
+                    <td>Date:2022/08/15</td>
+                    <td>Version 1.0.0</td>
+                </tr>
+
+                <tr>
+                    <td>Use case name:</td>
+                    <td>Fruit tree planting plan</td>
+
+                </tr>
+
+                <tr>
+                    <td>use case id:</td>
+                    <td>3</td>
+
+                </tr>
+                <tr>
+                    <td>Priority:</td>
+                    <td>High</td>
+
+                </tr>
+
+                <tr>
+                    <td>Source:</td>
+                    <td>Case Study</td>
+
+                </tr>
+
+                <tr>
+                    <td>Primary Business actor</td>
+                    <td>Pretoria zoo</td>
+                </tr>
+
+                <tr>
+                    <td>Other participating actors</td>
+                    <td>Sakata Seed Southern Africa</td>
+                </tr>
+
+                <tr>
+                    <td>Description</td>
+                    <td>This use case narrative describes the buying of Fruit tree seeds from Sakata Seed Southern Africa to plant in the Pretoria Zoo</td>
+                </tr>
+            </table>
+        </div>
+
+        <br />
+
+        <div id="UCN 4">
+            <table>
+                <tr>System Name: Low maintenance tree buying system</tr>
+                <tr>
+                    <td>Author: Nyanda Mdlalose</td>
+                    <td>Date:2022/08/15</td>
+                    <td>Version 1.0.0</td>
+                </tr>
+
+                <tr>
+                    <td>Use case name:</td>
+                    <td>Low maintenace tree planting plan</td>
+
+                </tr>
+
+                <tr>
+                    <td>use case id:</td>
+                    <td>4</td>
+
+                </tr>
+                <tr>
+                    <td>Priority:</td>
+                    <td>High</td>
+
+                </tr>
+
+                <tr>
+                    <td>Source:</td>
+                    <td>Case Study</td>
+
+                </tr>
+
+                <tr>
+                    <td>Primary Business actor</td>
+                    <td>Pretoria zoo</td>
+                </tr>
+
+                <tr>
+                    <td>Other participating actors</td>
+                    <td>Sakata Seed Southern Africa</td>
+                </tr>
+
+                <tr>
+                    <td>Description</td>
+                    <td>This use case narrative describes the buying of low maintenance tree seeds from Sakata Seed Southern Africa to plant in the Pretoria Zoo</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
